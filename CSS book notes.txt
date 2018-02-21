@@ -1,0 +1,1875 @@
+p ( selector ) {
+    font-family: Arial; ( declaration )
+}
+                         
+                         
+                         
+                         
+                         Using External CSS
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Using External CSS</title>
+		 <link href="css/styles.css" type="text/css"
+			 rel="stylesheet" />
+</head>
+
+<link> - tells the location of the file to a browser.Should use three attributes:
+
+href - place or folder (css or styles)
+type - type of the document. should be text/css
+rel - relationship between the page and file linked. stylesheet when linking to css file.
+
+you may do one css for text and colors, another one for layout control.
+
+                        Using Internal CSS
+Use only if you have a one page site lol.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Using Internal CSS</title>
+		 <style type="text/css">
+			 body {
+					 font-family: arial;
+					 background-color: rgb(185,179,175);}
+			 h1 {
+					 color: rgb(255,255,255);}
+		 </style>
+</head>
+<body>
+</body>
+</html>
+
+###################################################################################    
+                        CSS Selectors
+
+
+Universal Selector:
+Applies to all elements in the document.
+    * {}
+
+
+Type Selector:
+Matches element names
+    h1, h2, h3 {}
+
+
+Class Selector:
+Matches an element whose class attribute has a value that matches the one           specified after the period (or full stop) symbol.
+    .note {} - any element with class note
+    p.note {} - only <p> element with class of note
+
+
+ID Selector:
+Matches an element whose id attribute has a value that matches the one specified after the pound or hash symbol.
+    #introduction {}
+
+
+Child Selector:
+Matches an element that is a direct child of another.
+    li>a {} 
+Targets any <a> elements that are children of an <li> element (but not other <a> elements in the page).
+
+
+Descendant Selector:
+Matches an element that is a descendent of another specified element (not just a direct child of that element)
+    p a {}
+Targets any <a> elements that sit inside a <p> element, even if there are other elements nested between them.
+
+
+Adjacent Sibling Selector:
+Matches an element that is the next sibling of another.
+    h1+p {}
+Targets the first <p> element after any <h1> element (but not other <p> elements).
+
+
+General Sibling Selector:
+Matches an element that is a sibling of another, although it does not have to be the directly preceding element.
+    h1~p {}
+If you had two <p> elements that are siblings of an <h1> element, this rule would apply to both.
+
+###################################################################################
+    
+                            How Css Rules Cascade
+
+LAST RULE
+If the two selectors are identical, the latter of the two will take precedence. Here you can see the second i selector takes precedence over the first.
+    
+    
+SPECIFICITY
+If one selector is more specific than the others, the more specific rule will take precedence over more general ones. In this example:
+
+h1 is more specific than *
+p b is more specific than p
+p#intro is more specific than p
+
+IMPORTANT You can add !important after any property value to indicate that it should be considered more important than other rules that apply to the same element.
+  
+###################################################################################    
+    
+                               Inheritance
+
+If you specify the font-family or color properties on the <body> element, they will apply to most child elements. This is because the value of the font-family property is inherited by child elements. It saves you from having to apply these properties to as many elements (and results in simpler style sheets).
+    
+    
+body {
+    font-family: Arial, Verdana, sans-serif;
+    color: #665544;
+    padding: 10px;}
+.page {
+    border: 1px solid #665544;
+    background-color: #efefef;
+    padding: inherit;}
+   
+You can compare this with the background-color or border properties; they are not inherited by child elements. If these were inherited by all child elements then the page could look quite messy.
+   
+You can force to inherit from parent element. In example above padding inherits from body element.
+    
+###################################################################################    
+    
+                           CHECK LOOK IN OTHER BROWSERS
+BrowserCam.com
+BrowserLab.Adobe.com
+BrowserShots.org
+CrossBrowserTesting.com
+
+###################################################################################    
+                           Foreground Color
+    
+color - specifies the color of text inside an element.rgb values, hex codes, color names.
+    
+/* color name */      # comments in css.
+h1 {
+color: DarkCyan;}
+/* hex code */
+h2 {
+color: #ee3e80;}
+/* rgb value */
+p {
+color: rgb(100,100,90);}
+  
+background-color - sets the color of the background.ehite by default.
+    
+opacity - opacity for the element and all children elements. It is a number between 0.0 and 1.0.
+
+rgba - is a color + opacity ( 'a' is for alpha) . Applies only on parent element.
+
+   p.one {
+        background-color:opacity: 0.5;}
+   p.two {
+        background-color:background-color:rgb(0,0,0);
+        rgb(0,0,0);
+        rgba(0,0,0,0.5);}
+    
+################################################################################### 
+                        HSL Colors
+    
+Hue, saturation and lightness.
+    
+    body {
+        background-color: #C8C8C8;
+        background-color: #ffffff;
+    p {
+        background-color: hsl(0,0%,78%);}
+        background-color: hsla(0,100%,100%,0.5);}
+        
+hue - This is expressed as an angle (between 0 and 360 degrees).
+saturation - expressed as a percentage
+lightness - 0% is white, 50% is normal, 100% is black.
+hsla - works like hsl but + transparency(alpha).Between 0 - 1.0.
+    
+###################################################################################
+    
+                                TEXT
+    
+Typeface terminology:
+    
+Serif : Serif fonts have extra details on the ends of the main strokes of the letters. These details are known as serifs.
+
+Sans-Serif: Sans-serif fonts have straight ends to letters, and therefore have a much cleaner design.
+
+Monospace: Every letter in a monospace (or fixed-width) font is the same width. (Non-monospace fonts have different widths.)
+
+###################################################################################    
+    
+font-family - The value of this property is the name of the typeface you want to use.
+
+You can specify a list of fonts
+separated by commas so that,
+if the user does not have your
+first choice of typeface installed,
+the browser can try to use an
+alternative font from the list.
+    
+    body {
+        font-family:"Courier New", Georgia, Times, serif;}
+
+###################################################################################                        
+    
+font-size
+    
+    body {
+        font-family: Arial, Verdana,font-size: 12px;} - pixels
+    h1 {
+        font-size: 200%;} - percentages.
+    h2 {
+        font-size: 1.3em;} - EMS, equivalent to the letter m.
+    
+###################################################################################    
+                         UNITS OF TYPE SIZE
+    
+
+                        twelve pixel scale:
+
+                            h1 - 24px
+
+                            h2 - 18px
+
+                            h3 - 14px
+
+                            body - 12px    
+
+                        sixteen pixel scale:
+
+                            h1 - 32px
+
+                            h2 - 24px
+
+                            h3 - 18px
+
+                            body - 16px    
+
+###################################################################################
+    
+@font-face - allows you to use a font, even if it is not installed on user's machine.Specify a path, browser will download it.
+ 
+@font-face {
+font-family: 'ChunkFiveRegular';
+src: url('fonts/chunkfive.eot');}
+h1, h2 {
+font-family: ChunkFiveRegular, Georgia, serif;}
+    
+    
+font-family - specifies the name of the font.
+src - specifies a path to font.  
+format - format of the font
+
+www.google.com/webfonts
+www.fontsquirrel.com
+www.fontex.org
+www.openfontlibrary.org
+
+###################################################################################    
+                                 Font Formats
+Different browsers support
+different formats for fonts
+(in the same way that they
+support different audio and
+video formats), so you will need
+to supply the font in several
+variations to reach all browsers.
+
+ If you do not have all of these
+formats for your font, you can
+upload the font to a website
+called FontSquirrel where they
+will convert it for you:
+www.fontsquirrel.com/
+fontface/generator
+Font Squirrel also provides you
+with the CSS code for the
+@font-face rule. This is very
+helpful because, when you
+are dealing with multiple font
+formats, the src and format
+properties of the @font-face
+rule can get rather complicated.
+You can see an example of a
+more complicated @font-face
+rule on the left.
+    
+    
+The various font formats should
+appear in your code in this order:
+    
+1: eot
+2: woff
+3: ttf/otf
+4: svg
+
+    
+###################################################################################
+                                        
+                            BOLD
+    
+font-weight - create bold text.
+font-weight: normal;
+font-weight: bold;
+
+###################################################################################
+                            ITALIC
+
+font-style: normal;italic;oblique;    
+
+###################################################################################
+                            UpperCase & LowerCase
+
+text-transform: uppercase;lowercase;capitalize;
+
+###################################################################################
+                            Underline &  Strike
+    
+text-decoration: none; underline; overline; line-through; blink( flash on and off);
+
+###################################################################################
+                            LEADING(pron. ledding)
+    
+Leading is measured from the bottom of the descender on one line to the top of the ascender on the next.
+
+    
+line-weight: 1.4em;    
+
+Because users can adjust the default size of text in their browser, the value of the line- height property is best given in ems, not pixels, so that the gap between lines is relative to the size of text the user has selected.
+
+###################################################################################
+                         Letter & Word Spacing
+h1, h2 {
+    letter-spacing: 0.2em;}
+.credits {
+    word-spacing: 1em;}
+   
+###################################################################################   
+                          Alignment
+
+text-align: left; right; center; justify; (This indicates that every line in a paragraph, except the last line, should be set to take up the full width of the containing box.   
+
+###################################################################################
+    
+                        VerticalAlignment
+ 
+vertical-align:
+    baseline
+    sub
+    super
+    top
+    text-top
+    middle
+    bottom
+    text-bottom
+
+
+The vertical-align property is a common source of confusion. It is not intended to allow you to vertically align text in the middle of block level elements such as <p> and <div> , although it does have this effect when used with table cells (the <td> and <th> elements). It is more commonly used with inline elements such as <img> , <em> , or <strong> elements. When used with these elements, it performs a task very similar to the HTML align attribute used on the <img> element, which you met on pages 103-106. The values it can take are:
+
+###################################################################################
+    
+                         INDENTING TEXT
+    
+text-indent:
+    
+The text-indent property
+allows you to indent the first
+line of text within an element, in pixels or ems.
+
+
+###################################################################################
+                        CSS3: Drop Shadow
+text-shadow: 1px 1px 0px #000000;}
+
+    
+It is used to create a drop
+shadow, which is a dark version
+of the word just behind it and
+slightly offset. It can also be used
+to create an embossed effect by
+adding a shadow that is slightly
+lighter than the text.
+
+The value of this property is
+quite complicated because it can
+take three lengths and a color for
+the drop shadow.
+The first length indicates how
+far to the left or right the shadow
+should fall.
+The second value indicates the
+distance to the top or bottom
+that the shadow should fall.
+The third value is optional and
+specifies the amount of blur that
+should be applied to the drop
+shadow.
+The fourth value is the color of
+the drop shadow.
+
+
+###################################################################################
+                            First Letter or Line
+p.intro:first-letter {
+    font-size: 200%;}
+p.intro:first-line {
+    font-weight: bold;}
+
+Technically these are not
+properties. They are known as
+pseudo-elements.
+You specify the pseudo-element
+at the end of the selector, and
+then specify the declarations as
+you would normally for any other
+element.
+
+###################################################################################
+
+                            A pseudo-element and classes
+                            
+A pseudo-element acts like an
+extra element is in the code. In
+the case of the :first-letter
+and :first-line pseudo
+elements, it is as if there is an
+extra element around the first
+letter or the first line which can
+have its own styles applied.
+
+A pseudo-class acts like an
+extra value for a class attribute.
+In the case of the :visited
+pseudo-class, which you meet
+on the next page, it allows you
+to have different styles for links
+that have been visited. Similarly,
+the :hover pseudo-class allows
+you to style elements differently
+when a user hovers over them.
+
+###################################################################################
+
+                      Styling Links
+a:link {
+    color: deeppink;
+    text-decoration: none;}
+a:visited {
+    color: black;}
+a:hover {
+    color: deeppink;
+    text-decoration: underline;}
+a:active {
+    color: darkcyan;}
+
+###################################################################################
+
+                        RESPONDING TO USER 
+                        
+:hover
+This is applied when a user
+hovers over an element with a
+pointing device such as a mouse.
+This has commonly been used
+to change the appearance of
+links and buttons when a user
+places their cursor over them. It
+is worth noting that such events
+do not work on devices that use
+touch screens (such as the iPad)
+because the screen is not able to
+tell when someone is hovering
+their finger over an element.
+
+:active
+This is applied when an element
+is being activated by a user; for
+example, when a button is being
+pressed or a link being clicked.
+Sometimes this is used to make
+a button or link feel more like it
+is being pressed by changing the
+style or position of the element
+slightly.
+
+:focus
+This is applied when an element
+has focus. Any element that
+you can interact with, such as a
+link you can click on or any form
+control can have focus.
+Focus occurs when a browser
+discovers that you are ready to
+interact with an element on the
+page. For example, when your
+cursor is in a form input ready
+to accept typing, that element
+is said to have focus. It is also
+possible to use the tab key on
+your keyboard to move through
+the interactive items on a page.
+When pseudo-classes are
+used, they should appear in this
+order: :link, :visited, :hover ,
+:focus, :active.
+
+###################################################################################
+                        Attribute Selectors
+
+There are also a set of attribute selectors that allow you to create rules that apply to elements that have an attribute with a specific value.
+
+[] - EXISTENCE -  Matches a specific attribute(whatever its value)
+    p[class]
+Targets any <p> element with an
+attribute called class
+
+[=] - EQUALITY - Matches a specific attribute with a specific value.
+    p[class="dog"]
+Targets any <p> element with
+an attribute called class whose
+value is dog
+
+[~=] - SPACE - Matches a specific attribute
+whose value appears in a space-
+separated list of words
+    p[class~="dog"]
+Targets any <p> element with
+an attribute called class whose
+value is a list of space-separated
+words, one of which is dog
+
+[^=] - PREFIX - Matches a specific attribute
+whose value begins with a
+specific string.
+    p[attr^"d"]
+Targets any <p> element with
+an attribute whose value begins
+with the letter "d"
+
+[*=] - SUBSTRING - Matches a specific attribute
+whose value contains a specific
+substring.
+    p[attr*"do"]
+Targets any <p> element with an
+attribute whose value contains
+the letters "do"
+
+[$=] - SUFFIX - Matches a specific attribute
+whose value ends with a specific
+string.
+    p[attr$"g"]
+Targets any <p> element with an
+attribute whose value ends with
+the letter "g"
+
+###################################################################################
+
+
+                            BOXES
+ To set your own dimensions for a box you can use the height and width properties.
+                            
+                           Limiting Width
+                           
+min-width, max-width
+
+                            Limiting Height
+                            
+min-height, max-height
+
+                            Overflowing Content
+
+p.one {
+    overflow: hidden;}
+    
+p.one {
+    overflow: scroll;}
+    ###################################################################################
+
+                             BORDER, MARGIN & PADDING
+
+                                   Border Width
+border-width: 2px;
+border-width: thin;medium;thick
+
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+
+border-width: 2px 1px 1px 2px;   #shorthand for top;right;bottom;left
+
+
+
+Border Style
+
+
+    p.one {border-style: solid;}
+    p.two {border-style: dotted;}
+    p.three {border-style: dashed;}
+    p.four {border-style: double;}  # two solid lines (the value of the border-     width property creates the sum of the two lines).
+    p.five {border-style: groove;}  # appears to be carved into the page.
+    p.six {border-style: ridge;}    # appears to stick out from the page.
+    p.seven {border-style: inset;}  # appears embedded into the page.
+    p.eight {border-style: outset;} # looks like it is coming out of the screen
+
+    hidden / none no border is shown
+
+You can individually change the styles of different borders using:
+
+    border-top-style
+    border-left-style
+    border-right-style
+    border-bottom-style
+
+
+Border Color
+    border-color
+    
+p.one {
+    border-color: #0088dd;}
+p.two {
+    border-color: #bbbbaa #111111 #ee3e80 #0088dd;}
+    
+p {
+    width: 250px;
+    border: 3px dotted #0088dd;} # shorthand for border
+
+
+###################################################################################
+
+                            PADDING
+                            
+padding-top
+padding-right
+padding-bottom
+padding-left
+                   
+padding: 10px 5px 3px 1px;
+                   
+                               ###################################################################################
+
+
+                                MARGIN
+                                
+The margin property controls
+the gap between boxes.  
+Please note: If the width of a box
+is specified then the margin is
+added to the width of the box.
+
+margin: 1px 2px 3px 4px;
+margin: 10px 20px; # left and right 10px, top and bottom 20px
+
+                                
+
+                                                          
+                          CENTERING CONTENT
+                          
+If you want to center a box on
+the page (or center it inside
+the element that it sits in), you
+can set the left-margin and
+right-margin to auto .
+      
+Once you have specified the
+width of the box, setting the left
+and right margins to auto will
+make the browser put an equal
+gap on each side of the box. This
+centers the box on the page (or
+within the element that the box
+sits inside).
+    
+      
+In order to center a box on the
+page, you need to set a width
+for the box (otherwise it will take
+up the full width of the page).
+                       
+In order for this to work in older
+browsers (particularly IE6), the
+element that the box sits inside
+should have a text-align
+property with its value set to
+center .
+The text-align property is
+inherited by child elements. You
+therefore also need to specify
+the text-align property on the
+centered box if you do not want
+the text inside it to be centered.
+
+                                
+
+###################################################################################
+
+
+                            CHANGE INLINE/BLOCK
+display
+
+The display property allows
+you to turn an inline element
+into a block-level element or vice
+versa, and can also be used to
+hide an element from the page.
+
+
+    inline
+This causes a block-level
+element to act like an inline
+element.
+
+    block
+This causes an inline element to
+act like a block-level element.
+
+    inline-block
+This causes a block-level
+element to flow like an inline
+element, while retaining other
+features of a block-level element.
+
+none
+This hides an element from the
+page. In this case, the element
+acts as though it is not on the
+page at all (although a user could
+still see the content of the box if
+they used the view source option
+in their browser).
+
+
+                                Hiding Boxes
+    visibility
+The visibility property allows
+you to hide boxes from users
+but It leaves a space where the
+element would have been.
+
+hidden
+This hides the element.
+visible
+This shows the element.
+
+###################################################################################
+
+                            Borderborder-image
+
+The border-image property
+applies an image to the border of
+any box. It takes a background
+image and slices it into nine
+pieces.
+
+Here is the image. I have
+added marks where it is
+sliced in the example,
+taking 18 pixels from each corner
+to place an entire circle in each
+corner. The corner slices are
+always placed in the four corners
+of the box, but we have a choice
+whether the sides are stretched
+or repeated.
+
+This property requires three
+pieces of information:
+
+1: The URL of the image
+2: Where to slice the image
+3: What to do with the straight
+edges; the possible values are:
+stretch stretches the image
+repeat repeats the image
+round like repeat but if the
+tiles do not fit exactly, scales
+the tile image so they will
+The box must also have a border
+width for the image to be shown.
+The -moz-border-image
+and -webkit-border-image
+properties are not in the CSS
+specification but help earlier
+versions of Chrome, Firefox, and
+Safari display this effect.
+
+###################################################################################
+                        Box Shadows
+                        
+    box-shadow
+
+Horizontal offset
+Negative values position the
+shadow to the left of the box.
+
+Vertical offset
+Negative values position the
+shadow to the top of the box.
+
+Blur distance
+If omitted, the shadow is a solid
+line like a border.
+
+Spread of shadow
+If used, a positive value will
+cause the shadow to expand in
+all directions, and a negative
+value will make it contract.
+
+The inset keyword can also
+be used before these values to
+create an inner-shadow.
+
+
+p.one {
+    -moz-box-shadow: -5px -5px #777777;
+    -webkit-box-shadow: -5px -5px #777777;
+    box-shadow: -5px -5px #777777;}
+p.two {
+    -moz-box-shadow: 5px 5px 5px #777777;
+    -webkit-box-shadow: 5px 5px 5px #777777;
+    box-shadow: 5px 5px 5px #777777;}
+p.three {
+    -moz-box-shadow: 5px 5px 5px 5px #777777;
+    -webkit-box-shadow: 5px 5px 5px 5px #777777;
+    box-shadow: 5px 5px 5px 5px #777777;}
+p.four {
+    -moz-box-shadow: 0 0 10px #777777;
+    -webkit-box-shadow: 0 0 10px #777777;
+    box-shadow: 0 0 10px #777777;}
+p.five {
+    -moz-box-shadow: inset 0 0 10px #777777;
+    -webkit-box-shadow: inset 0 0 10px #777777;
+    box-shadow: inset 0 0 10px #777777;}
+    
+    ###################################################################################
+
+                                ROUNDED CORNERS
+                                
+    border-radius
+    
+The -moz-border-radius
+and -webkit-border-radius
+properties are not in the CSS
+specification. However, they
+are used in some versions of
+Chrome, Firefox, and Safari to
+offer early support for this style
+(and therefore can be used
+to achieve this effect in more
+browsers).
+   
+    
+border-top-right-radius
+border-bottom-right-radius
+border-bottom-left-radius
+border-top-left-radius
+
+
+border-radius: 5px, 10px, 5px, 10px;
+
+###################################################################################
+                                ELLIPTICAL SHAPES
+                                
+     border radius
+     
+For example, this will create a
+radius that is wider than it is tall:
+border-radius: 80px 50px;
+
+You can target just one corner
+using the individual properties
+for that corner:
+border-top-left-radius:
+80px 50px;
+
+                               ###################################################################################
+                               
+                               LIST, TABLES AND FORMS
+
+list-style-type -
+allows you to control the shape
+or style of a bullet point (also
+known as a marker).
+
+For an unordered list you can use
+the following values:
+    none
+    disc
+    circle
+    square
+
+For an ordered (numbered) list
+you can use the following values:
+    decimal
+        1 2 3
+    decimal-leading-zero
+        01 02 03
+    lower-alpha
+        a b c
+    upper-alpha
+        A B C
+    lower-roman
+        i. ii. iii.
+    upper-roman
+        I II III
+
+
+                            IMAGES FOR BULLETS
+                            
+    list-style-image -
+The value starts with the letters
+url and is followed by a pair
+of parentheses. Inside the
+parentheses, the path to the
+image is given inside double
+quotes. used on <ul> and <li>.
+    
+                          Positioning the Marker
+
+    list-style-position-
+indicates
+whether the marker should
+appear on the inside or the
+outside of the box containing the
+main points.
+       outside - The marker sits to the left
+       inside - The marker sits inside the box
+       
+       
+       
+                           LIST SHORTHAND
+                           
+ list-style - 
+it allows you to express
+the markers' style, image and
+position properties in any order.
+              
+    ul {
+        list-style: inside circle;}
+
+                       TABLE PROPERTIES
+width-to set the width of the table
+
+padding-to set the space between the border of each table cell and its content
+
+text-transform to convert the content of the table headers to uppercase
+ 
+letter-spacing, font-size -to add additional styling to the content of the table headers.
+
+border-top, border-bottom - to set borders above and below the table headers
+
+text-align to align the writing to the left of some table cells and to the right of the others.
+
+background-color to change the background color of the alternating table rows
+
+:hover to highlight a table row when a user's mouse goes over it
+                    
+                       BORDER ON EMPTY CELLS
+                       
+    empty-cells - 
+to specify whether or not their
+borders should be shown.
+
+    show
+This shows the borders of any
+empty cells.
+
+    hide
+This hides the borders of any
+empty cells.
+
+    inherit
+If you have one table nested
+inside another, the inherit
+value instructs the table cells to
+obey the rules of the containing
+table.
+
+                       GPAS BETWEEN CELLS
+                       
+border-spacing, border-collapse
+
+The border-spacing property
+allows you to control the
+distance between adjacent cells.
+
+When a border has been used
+on table cells, where two cells
+meet, the width of lines would be
+twice that of the outside edges.
+It is possible to collapse adjacent
+borders to prevent this using the
+border-collapse property.
+Possible values are:
+
+collapse
+Borders are collapsed into a
+single border where possible.
+(border-spacing will be
+ignored and cells pushed
+together, and empty-cells
+properties will be ignored.)
+
+separate
+Borders are detached from each
+other. (border-spacing and
+empty-cells will be obeyed.)
+
+##################################################################################
+
+                            CURSOR STYLES
+                            
+    cursor      
+Allows
+you to control the type of mouse
+cursor that should be displayed
+to users.
+
+Here are the most commonly
+used values for this property:
+auto
+crosshair
+default
+pointer
+move
+text
+wait
+help
+url("cursor.gif");
+
+##################################################################################
+
+                            LAYOUT
+                    CONTROLLING THE POSITION
+                    
+Normal flow:
+Every block-level element
+appears on a new line, causing
+each item to appear lower down
+the page than the previous one.
+Even if you specify the width
+of the boxes and there is space
+for two elements to sit side-by-
+side, they will not appear next
+to each other. This is the default
+behavior (unless you tell the
+browser to do something else).
+                    
+Relative Positioning:
+This moves an element from the
+position it would be in normal
+flow, shifting it to the top, right,
+bottom, or left of where it
+would have been placed. This
+does not affect the position of
+surrounding elements; they stay
+in the position they would be in
+in normal flow.
+               
+Absolute positioning:
+This positions the element
+in relation to its containing
+element. It is taken out of
+normal flow, meaning that it
+does not affect the position
+of any surrounding elements
+(as they simply ignore the
+space it would have taken up).
+Absolutely positioned elements
+move as users scroll up and
+down the page.
+             
+             ##################################################################################
+             
+                     NORMAL FLOW
+                    position:static
+
+In normal flow, each block-level element sits on top of the next one. default way.
+
+                    RELATIVE POSITIONING
+                     position: relative
+                      
+Relative positioning moves an element in relation to where it would have been in normal flow.For example, you can move it 10 pixels lower than it would have been in normal flow or 20% to the right.
+
+You can indicate that an element
+should be relatively positioned
+using the position property
+with a value of relative.
+
+You then use the offset
+properties ( top or bottom and
+left or right ) to indicate how
+far to move the element from
+where it would have been in
+normal flow.
+
+
+p.example {
+    position: relative;
+    top: 10px;
+    left: 100px;}
+        
+        
+                       ABSOLUTE POSITIONING
+                       position:absolute
+                       
+When the position property
+is given a value of absolute ,
+the box is taken out of normal
+flow and no longer affects the
+position of other elements on
+the page. (They act like it is not
+there.)
+
+The box offset properties ( top
+or bottom and left or right )
+specify where the element
+should appear in relation to its
+containing element.
+
+                        FIXED POSITIONING
+                        position:fixed
+                        
+Fixed positioning is a type
+of absolute positioning that
+requires the position property
+to have a value of fixed.
+                     
+It positions the element in
+relation to the browser window.
+Therefore, when a user scrolls
+down the page, it stays in the
+exact same place. It is a good
+idea to try this example in your
+browser to see the effect.
+                    
+                    OVERLAPING ELEMENTS
+                          z-index
+
+When you use relative, fixed, or
+absolute positioning, boxes can
+overlap. If boxes do overlap, the
+elements that appear later in the
+HTML code sit on top of those
+that are earlier in the page.
+If you want to control which
+element sits on top, you can use
+the z-index property. Its value
+is a number, and the higher the
+number the closer that element
+is to the front. For example, an
+element with a z-index of 10
+will appear over the top of one
+with a z-index of 5.
+
+##################################################################################
+
+                        FLOATING ELEMENTS
+                            float
+img.align-left {
+    float: left;
+
+ 
+ 
+The float property allows you
+to take an element in normal
+flow and place it as far to the
+left or right of the containing
+element as possible.
+
+Anything else that sits inside
+the containing element will
+flow around the element that is
+floated.
+
+When you use the float
+property, you should also use the
+width property to indicate how
+wide the floated element should
+be. If you do not, results can be
+inconsistent but the box is likely
+to take up the full width of the
+containing element (just like it
+would in normal flow).
+
+
+                      Clearing Floats
+                             clear
+
+The clear property allows you
+to say that no element (within
+the same containing element)
+should touch the left or right-
+hand sides of a box. It can take
+the following values:
+
+ left
+The left-hand side of the box
+should not touch any other
+elements appearing in the same
+containing element.
+ right
+The right-hand side of the
+box will not touch elements
+appearing in the same containing
+element.
+ both
+Neither the left nor right-hand
+sides of the box will touch
+elements appearing in the same
+containing element.
+ none
+Elements can touch either side.
+
+                ##################################################################################
+                
+                            PAGE SIZES
+960 - 1000 pixels wide.                           
+      
+      
+                       Fixed Width Layouts
+                       
+Fixed width layout
+designs do not
+change size as the
+user increases
+or decreases
+the size of their
+browser window.
+Measurements tend
+to be given in pixels.
+
+
+Advantages
+●●
+Pixel values are accurate
+at controlling size and
+positioning of elements.
+●●
+The designer has far greater
+control over the appearance
+and position of items on the
+page than with liquid layouts.
+●●
+You can control the lengths
+of lines of text regardless of
+the size of the user's window.
+●●
+The size of an image will
+always remain the same
+relative to the rest of the
+page.
+
+
+Disadvantages
+
+●●
+ You can end up with big gaps
+around the edge of a page.
+●●
+If the user's screen is a much
+higher resolution than the
+designer's screen, the page
+can look smaller and text can
+be harder to read.
+●●
+If a user increases font sizes,
+text might not fit into the
+allotted spaces.
+●●
+The design works best on
+devices that have a site or
+resolution similar to that of
+desktop or laptop computers.
+●●
+The page will often take up
+more vertical space than a
+liquid layout with the same
+content.
+
+                        Liquid Layouts
+                        
+Liquid layout designs
+stretch and contract
+as the user increases
+or decreases the
+size of their browser
+window. They tend to
+use percentages.
+
+##################################################################################
+                       FIXED WIDTH LAYOUT
+                       
+The fixed width layout will stay
+the same width no matter what
+size the browser window is,
+whereas the liquid layout will
+stretch (or shrink) to fill the
+screen.
+
+
+body {
+    width: 960px;
+    margin: 0 auto;}
+#content {
+    overflow: auto;
+    height: 100%;}
+#nav, #feature, #footer {
+    background-color: #efefef;
+    padding: 10px;
+    margin: 10px;}
+.column1, .column2, .column3 {
+    background-color: #efefef;
+    width: 300px;
+    float: left;
+    margin: 10px;}
+li {
+    display: inline;
+    padding: 5px;}
+##################################################################################
+                       LIQUID LAYOUT
+                       
+There is a rule on the <body>
+element to set the width of the
+page to 90% so that there is a
+small gap between the left and
+right-hand sides of the browser
+window and the main content.
+
+The three columns are all given
+a margin of 1% and a width of
+31.3%. This adds up to 99.9%
+of the width of the <body>
+element, so some browsers
+might not perfectly align the
+right-hand side of the third
+column with other elements on
+the page.
+
+The <div> elements that hold
+the navigation, feature, and
+footer will stretch to fill the
+width of the containing <body>
+element. They are given a 1%
+margin to help them align with
+the columns.
+If you imagine the browser
+window to be very wide or very
+narrow, you can see how lines of
+text could become very long or
+very short.
+
+This is where the min-width
+and max-width properties help
+create boundaries within which
+the layout can stretch (although
+Internet Explorer 7 was the first
+version of IE to support these
+properties).
+
+body {
+    width: 90%;
+    margin: 0 auto;}
+#content {overflow: auto;}
+#nav, #feature, #footer {
+    margin: 1%;}
+.column1, .column2, .column3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;}
+.column3 {margin-right: 0%;}
+li {
+    display: inline;
+    padding: 0.5em;}
+#nav, #footer {
+    background-color: #efefef;
+    padding: 0.5em 0;}
+#feature, .article {
+    height: 10em;
+    margin-bottom: 1em;
+    background-color: #efefef;}
+
+
+##################################################################################
+
+                                    LAYOUT GRIDS
+These two pages illustrate a 960
+pixel wide, 12 column grid. They
+demonstrate how it is possible
+to create a wide range of column
+layouts using this one grid.
+The page is 960 pixels wide and
+there are 12 equal sized columns
+(shown in gray), each of which is
+is 60 pixels wide.
+Each column has a margin set
+to 10 pixels, which creates a a
+gap of 20 pixels between each
+column and 10 pixels to the left
+and right-hand sides of the page.
+                                    
+                              ##################################################################################
+                              
+                              MULTIPLE STYLESHEETS
+                                   @import
+Some web page authors split
+up their CSS style rules into
+separate style sheets. For
+example, they might use one
+style sheet to control the layout
+and another to control fonts,
+colors and so on.
+                                   
+
+There are two ways to add
+multiple style sheets to a page:
+1: Your HTML page can link
+to one style sheet and that
+stylesheet can use the @import
+rule to import other style sheets.
+2: In the HTML you can use a
+separate <link> element for
+each style sheet.
+The example on this page
+uses one <link> element in
+the HTML to link to a style
+sheet called styles.css. This
+stylesheet then uses the
+@import rule to import the
+typography.css and
+tables.css files.
+If a styesheet uses the @import
+rule, it should appear before the
+other rules.
+
+<link rel="stylesheet" type="text/css"
+			 href="css/styles.css" />
+
+styles.css:
+
+@import url("tables.css");
+@import url("typography.css");
+body {
+color: #666666;....
+        
+
+                                    MULTIPLE STYLESHEET
+                                        link
+                                        
+<head>
+		 <title>Multiple Style Sheets - Link</title>
+		 <link rel="stylesheet" type="text/css"
+			 href="css/site.css" />
+		 <link rel="stylesheet" type="text/css"
+			 href="css/tables.css" />
+		 <link rel="stylesheet" type="text/css"
+href="css/typography.css" />
+</head>
+
+##################################################################################
+                                   IMAGES
+                                   
+You can control the size of an
+image using the width and
+height properties in CSS, just
+like you can for any other box.
+                                
+Small portrait: 220 x 360
+Small landscape: 330 x 210
+Feature photo: 620 x 400
+     
+
+First you need to determine the
+sizes of images that will be used
+commonly throughout the site,
+then give each size a name.
+For example:
+    small
+    medium
+    large
+Where the <img> elements
+appear in the HTML, rather
+than using width and height
+attributes you can use these
+names as values for the class
+attribute.
+In the CSS, you add selectors for
+each of the class names, then
+use the CSS width and height
+properties to control the image
+dimensions.
+
+
+                              ALIGNING IMAGES
+                              
+Rather than using the <img>
+element's align attribute, web
+page authors are increasingly
+using the float property to align
+images. There are two ways that
+this is commonly achieved:
+
+1: The float property is added
+to the class that was created to
+represent the size of the image
+(such as the small class in our
+example).
+
+2: New classes are created with
+names such as align-left or
+align-right to align the images
+to the left or right of the page.
+These class names are used in
+addition to classes that indicate
+the size of the image.
+
+
+                        CENTERING IMAGES
+                        
+By default, images are inline elements.  
+
+This means that they
+flow within the surrounding text.
+In order to center an image, it
+should be turned into a block-
+level element using the display
+property with a value of block .
+
+Once it has been made into a
+block-level element, there are
+two common ways in which you
+can horizontally center an image:
+1: On the containing element,
+you can use the text-align
+property with a value of center .
+2: On the image itself, you can
+use the use the margin property
+and set the values of the left and
+right margins to auto.
+
+
+
+##################################################################################
+
+                                BACKGROUND IMAGES
+                                
+                                background-image
+                                
+body {
+    background-image: url("images/pattern.gif");}
+                               
+                                
+                                REAPEATING IMAGES
+                                
+                                background-repeat
+                              background-attachement
+                              
+body {
+    background-image: url("images/header.gif");
+    background-repeat: repeat-x;}
+
+
+ repeat
+The background image is
+repeated both horizontally and
+vertically (the default way it
+is shown if the background-
+repeat property isn't used).
+
+    repeat-x
+The image is repeated
+horizontally only (as shown in
+the first example on the left).
+
+    repeat-y
+The image is repeated vertically
+only.
+
+
+    no-repeat
+The image is only shown once.
+The background-attachment
+property specifies whether a
+background image should stay in
+one position or move as the user
+scrolls up and down the page. It
+can have one of two values:
+
+    fixed
+The background image stays in
+the same position on the page.
+
+    scroll
+The background image moves
+up and down as the user scrolls
+up and down the page.
+
+##################################################################################
+
+                            BACKGROUND POSITION
+                            
+                            background-position
+                            
+body {
+    background-image: url("images/tulip.gif");
+    background-repeat: no-repeat;
+    background-position: center top;}
+                            
+                            
+When an image is not being
+repeated, you can use the
+background-position
+property to specify where in the
+browser window the background
+image should be placed.
+This property usually has a pair
+of values. The first represents
+the horizontal position and the
+second represents the vertical.
+
+left top
+left center
+left bottom
+center top
+center center
+center bottom
+right top
+right center
+right bottom
+
+
+
+You can also use a pair of pixels
+or percentages. These represent
+the distance from the top left
+corner of the browser window
+(or containing box). The top left
+corner is equal to 0% 0% . The
+example shown, with values of
+50% 50%, centers the image
+horizontally and vertically.
+
+
+body {
+    background-image: url("images/tulip.gif");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;}
+
+                             SHORTHAND
+                             background
+                             
+The background property acts
+like a shorthand for all of the
+other background properties
+you have just seen, and also the
+background-color property.
+
+body {
+    background: #ffffff url("images/tulip.gif")
+	  no-repeat top right;}
+
+
+
+The properties must be specified
+in the following order, but you
+can miss any value if you do not
+want to specify it.
+1: background-color
+2: background-image
+3: background-repeat
+4: background-attachment
+5: background-position
+                      
+                      
+                      
+                      IMAGE ROLLOVERS & SPRITES
+ <a class="button" id="add-to-basket">
+Add to basket</a>
+<a class="button" id="framing-options">
+Framing options</a>
+  
+a.button {
+height: 36px;
+background-image: url("images/button-sprite.jpg");
+text-indent: -9999px;
+display: inline-block;}
+a#add-to-basket {
+width: 174px;
+background-position: 0px 0px;}
+a#framing-options {
+width: 210px;
+background-position: -175px 0px;}
+a#add-to-basket:hover {
+background-position: 0px -40px;}
+a#framing-options:hover {
+background-position: -175px -40px;}
+a#add-to-basket:active {
+background-position: 0px -80px;}
+a#framing-options:active {
+background-position: -175px -80px;}
+  
+  
+           
+Using CSS, it is possible to create
+a link or button that changes to a
+second style when a user moves
+their mouse over it (known as a
+rollover) and a third style when
+they click on it.
+
+
+When the user moves their
+mouse over the element, or
+clicks on it, the position of the
+background image is moved to
+show the relevant image.
+
+When a single image is used
+for several different parts of an
+interface, it is known as a sprite.
+You can add the logo and other
+interface elements, as well as
+buttons to the image.
+                                                                                                                              ##################################################################################
+                          HTML5 LAYOUT ELEMENTS
+<div id="page">
+  <header>
+    <nav>
+  <div id="content">
+    <article>
+    <article>
+  <footer>
+  
+##################################################################################  
+                        HEADERS & FOOTERS
+The <header> and <footer>
+elements can be used for:
+●●
+The main header or footer
+that appears at the top or
+bottom of every page on the
+site.
+●●
+A header or footer for an
+individual <article> or
+<section> within the page.
+
+##################################################################################
+                            NAVIGATION
+                               <nav>
+<nav>
+<ul>
+		 <li><a
+ href="" class="current">home</a></li>
+		 <li><a
+ href="">classes</a></li>
+		 <li><a
+ href="">catering</a></li>
+		 <li><a
+ href="">about</a></li>
+		 <li><a
+ href="">contact</a></li>
+</ul>
+</nav>
+
+
+The <nav> element is used to
+contain the major navigational
+blocks on the site such as the
+primary site navigation.
+Going back to our blog example,
+if you wanted to finish an article
+with links to related blog posts,
+these would not be counted as
+major navigational blocks and
+therefore should not sit inside a
+<nav> element.
+At the time of writing, some of
+the developers that were already
+using HTML5 decided to use the
+<nav> element for the links that
+appear at the bottom of every
+page (links to things like privacy
+policy, terms and conditions
+and accessibility information).
+Whether this will be widely
+adopted is still yet to be seen.
+
+
+                                ARTICLES
+                                <article>
+
+The <article> element acts as
+a container for any section of a
+page that could stand alone and
+potentially be syndicated.
+
+If a page contains several articles
+(or even summaries of several
+articles), then each individual
+article would live inside its own
+<article> element.
+
+
+                             ASIDES
+
+<aside>
+<section class="popular-recipes">
+		 <h2>Popular Recipes</h2>
+		 <a href="">Yakitori (grilled chicken)</a>
+		 <a href="">Tsukune (minced chicken patties)</a>
+		 <a href="">Okonomiyaki (savory pancakes)</a>
+		 <a href="">Mizutaki (chicken stew)</a>
+</section>
+<section class="contact-details">
+		 <h2>Contact</h2>
+		 <p>Yoko's Kitchen<br />
+			 27 Redchurch Street<br />
+			 Shoreditch<br />
+			 London E2 7DP</p>
+</section>
+</aside>
+                          
+The <aside> element has two
+purposes, depending on whether
+it is inside an <article>
+element or not.
+
+
+When the <aside> element
+is used inside an <article>
+element, it should contain
+information that is related to the
+article but not essential to its
+overall meaning. For example, a
+pullquote or glossary might be
+considered as an aside to the
+article it relates to.
+
+When the <aside> element is
+used outside of an <article>
+element, it acts as a container
+for content that is related to
+the entire page. For example,
+it might contain links to other
+sections of the site, a list of
+recent posts, a search box, or
+recent tweets by the author.
+
+                                    SECTIONS
+                                    <section>
+                                    
+                                    
+<section class="popular-recipes">
+<h2>Popular Recipes</h2>
+<a href="">Yakitori (grilled chicken)</a>
+<a href="">Tsukune (minced chicken patties)</a>
+<a href="">Okonomiyaki (savory pancakes)</a>
+<a href="">Mizutaki (chicken stew)</a>
+</section>
+                                    
+                                    
+The <section> element groups
+related content together, and
+typically each section would
+have its own heading.
+                           
+                                    

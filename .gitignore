@@ -1,0 +1,6 @@
+*.swp
+*.directory
+/.ipynb_checkpoints
+.ipynb_checkpoints
+*.swo
+

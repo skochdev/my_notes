@@ -1,0 +1,1116 @@
+CMS - content management system.
+
+ISP - Internet Service Provider
+
+DNS - Domain Name System
+
+URL - Uniform Resource Locator
+
+SSL - Secue Socket Layers
+
+SSH - Secure Shell
+
+
+<b></b> - bold
+
+<i></i> - italic
+
+<sup></sup> - superscript
+
+<sub></sub> - subscript
+
+</br> - break
+
+</hr> - horizontal ruler
+
+<strong></strong> - will make text bold
+
+<em></em> - italic
+
+<blockquote></blockquote> - for longer quotes for large paragraphs. Indented
+
+<q></q> - quotes within a paragraph
+
+<abbr title="Domain Name System">DNS</abbr> - specifies the full term of abbreviation.
+
+<p><cite>A Brief History of Time</cite> by Stephen Hawking .</p> - text will look italic.
+
+<address>
+    <p><a href="mailto:homer@example.org">
+        homer@example.org</a></p>
+    <p>742 Evergreen Terrace, Springfield.</p>
+</address>
+
+<del>Has line through it</del><ins> underlined added content.</ins>
+
+<s></s> - works like<del></del>, but indicates that is no longer accurate.
+
+<ol>
+    <li></li>  - Ordered list.
+</ol>
+
+    
+<ul>
+    <li></li>
+</ul>
+
+<dl>
+    <dt></dt> - Definition list with definition terms.
+    <dd></dd> - Definition itself.
+</dl>
+    
+<a href="http://www.empireonline.com"> Empire</a>  - Link to external web page.
+
+< a href="about.html">About Me</a> - Link to page if the html file is in the same folder as index.html
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            
+                            Relative URLs:
+
+<a href="movies/dvd/reviews.html">Reviews</a>
+
+<a href="../reviews.html">Reviews</a> - one level up
+<a href="../../reviews.html">Reviews</a> - two levels up
+
+Email Links:
+
+<a href="mailto:b.sk@gmail.com">Email Me</a>
+
+Open link in a new window:
+
+<a href="http://www.google.com" target="_blank">Google</a>
+
+Linking to a specific part of the same page:
+
+<p id="top">Welcome"</p> - set up the id of the element first.(value start with underscore letters, folloved by numbers, if needed.
+
+<a href="#top">Return to Top</a> - use id name with # in front to link to the element.
+    
+Linking to a specific part of another page:
+
+The page must have id attributes, which you can use to link from your page.
+
+<a href="http:/www.htmlandcssbookcom/#top">Link to particular place</a>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            IMAGES
+
+<img src="images/foto.jpg" alt="Describtion" title="(optional)" />
+
+<img src="images/quokka.jpg" alt="A family of quokka" width="600" height="450" />
+
+Image placements:
+
+<img src.../> - before paragraph. Text will start on a new line after image.
+<p></p>
+
+<p><img src.../></p> -inside the start.First row of text aligns with the bottom of the image.
+
+<p>Some text <img src../></p> -In the middle.Image placed between the words.
+
+Block elements:
+
+Block elements always appear on a new line. <h1> or<p>.
+    
+If the <img> is followed by a
+block level element (such as a
+paragraph) then the block level
+element will sit on a new line
+after the imageas shown in the
+first example on this page.
+_____________________________________
+    
+Inline element:
+    
+Inline elements sit within a block level element and do not start on a new line.
+    <em>,<b>,<img>
+
+If the <img> element is inside a
+block level element, any text or
+other inline elements will flow
+around the image as shown in
+the second and third examples
+on this page.
+_____________________________________________
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            IMAGE RULES
+        
+1. Save images in the right format - jpg, png, gif
+2. Save images at the right size. - resize img's to the desired size.
+3. Use the correct resolution   - 72 pixels per inch.
+
+72ppi(pixels per inch)        
+
+___________________________________________________
+        
+Figure and figure caption
+Associate image and it's caption.        
+    <figure><img src="images/foto.jpg" alt=""/><figcaption>Caption for the image text, info, etc.</figcaption></figure>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            TABLES
+
+        <table>
+          <tr>
+              <th>Table heading</th>
+              <td>Table Data</td>
+          </tr>
+        </table>
+
+Colspan:
+indicates how many columns that cell( th or td) should run across.
+    <tr>
+       <th>Tuesday</th>
+       <td colspan="3">Gym</td>
+       <td>Home Ec</td>
+    </tr>
+     
+
+Rowspan:
+Stretch the entry down across more than one row. can be used with th or td.
+<tr>
+  <th>6pm - 7pm</th>
+  <td rowspan="2">Movie</td>
+  <td>Comedy</td>
+  <td>News</td>
+</tr>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            LONG TABLES
+        
+There are three elements that
+help distinguish between the
+main content of the table and
+the first and last rows (which can
+contain different content).
+        
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+ 
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                            FORMS
+        
+XX
+ Whenever you want to collect information from
+visitors you will need a form, which lives inside a
+<form> element.
+XX
+ Information from a form is sent in name/value pairs.
+XX
+ Each form control is given a name, and the text the
+user types in or the values of the options they select
+are sent to the server.
+XX
+ HTML5 introduces new form elements which make it
+easier for visitors to fill in forms.
+       
+        
+        
+        
+        
+        
+        
+        
+<form action="http://www.example.com/subscribe.php"
+  method="GET">
+  <p>This is where the form controls will appear.</p>
+</form>
+  
+        
+form controls live inside a <form></form> element.Usually have action attribute and have a method and id attribute.
+Every <form> requires an action attribute. It's value is the URL for the page on the server that will recieve the information from the form when submitted.
+Forms can be sent using one of two methods: GET of POST.
+
+With GET method,the values from the form are added tothe end of the URL specified in the action attribute. Search boxes, or simply getting info from the server. 
+        
+With POST,  the values are sent in what are known as HTTP headers.Allows users to upload the file; or very long, contains passwords;adds info or deletes information.
+        
+If method is not specified, form will use GET method by default.
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            TEXT INPUT
+
+<form action="http://www.example.com/login.php">
+  <p>Username:
+    <input type="text" name="username" size="15"
+      maxlength="30" />
+  </p>
+</form>
+        
+        
+<input> element is used to create several different form controls. The value of the type attribute determines the kind of input.
+        
+type="text" - creates a single line text input.
+name - defines the form control and is sent along with the information entered to the server.
+size - should not be used in html, rather in CSS.
+maxlength - limit the number of chars user can enter.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            PASSWORD INPUT
+        
+<form action="http://www.example.com/login.php">
+<p>Username:
+		 <input type="text" name="username" size="15"
+			 maxlength="30" />
+</p>
+<p>Password:
+		 <input type="password" name="password" size="15"
+			 maxlength="30" />
+</p>
+</form>
+
+type="password" - acts the same as "text", but charachters are blocked out.
+name - works the same as in text input.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                                TEXT AREA
+        
+<form action="http://www.example.com/comments.php">
+<p>What did you think of this gig?</p>
+<textarea name="comments" cols="20" rows="4">Enter
+        your comments...</textarea>
+</form>
+ 
+<textarea></textarea> - creates multiline text input.Any text inside this tags will appear inside the text box when the page loads.If user will not delete this text, it will be send to the server too. JS can remove this text, if the user clicks the form.
+The cols attribute indicates how wide the text area should be (measured in numbers of characters). The rows attribute indicates how many rows the text area should take up vertically.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                                RADIO BUTTON
+<form action="http://www.example.com/profile.php">
+  <p>Please select your favorite genre:
+    <br />
+    <input type="radio" name="genre" value="rock"
+      checked="checked" /> Rock
+    <input type="radio" name="genre" value="pop" />
+      Pop
+    <input type="radio" name="genre" value="jazz" />
+      Jazz
+  </p>
+</form>
+
+type="radio" allows user to pick one of a number of options.
+name and value - will be sent to the server, so this is the keys.
+checked="checked" - indicates which value should be selected when the page loads.Only one value in a group can be checked.User have to select a button, otherwise the default "checked" button will be used.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            CHECKBOX
+
+Checkbox with multiple choises.        
+       
+        
+<form action="http://www.example.com/profile.php">
+  <p>Please select your favorite music service(s):
+    <br />
+    <input type="checkbox" name="service"
+      value="itunes" checked="checked" /> iTunes
+    <input type="checkbox" name="service"
+      value="lastfm" /> Last.fm
+    <input type="checkbox" name="service"
+      value="spotify" /> Spotify
+  </p>
+</form>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            DROP DOWN LIST BOX
+
+<form action="http://www.example.com/profile.php">
+  <p>What device do you listen to music on?</p>
+  <select name="devices">
+    <option value="ipod">iPod</option>
+    <option value="Radio">Radio</option>
+    <option value="Computer" selected="selected">PC</option>
+  </select>
+</form>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            Multiple Select bOX
+        
+<form action="http://www.example.com/profile.php">
+  <p>Do you play any of the following instruments?
+    (You can select more than one option by holding
+    down control on a PC or command key on a Mac
+    while selecting different options.)</p>
+  <select name="instruments" size="3"
+    multiple="multiple">
+    <option value="guitar" selected="selected">
+      Guitar</option>
+    <option value="drums">Drums</option>
+    <option value="keyboard"
+    selected="selected">Keyboard</option>
+    <option value="bass">Bass</option>
+  </select>
+</form>
+
+multiple="multiple" - allows to pick more than one element
+size="3" - number of options you want to show in a box, user can scroll to see rest.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            File Input Box
+<form action="http://www.example.com/upload.php"
+  method="POST">
+  <p>Upload your song in MP3 format:</p>
+  <input type="file" name="user-song" /><br />
+  <input type="submit" value="Upload" />
+</form>
+
+If you want to allow users to upload a file (for example an image, video, mp3, or a PDF), you will need to use a file input box.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++       
+                             SUBMIT BUTTON
+<form action="http://www.example.com/subscribe.php">
+  <p>Subscribe to our email list:</p>
+  <input type="text" name="email" />
+  <input type="submit" name="subscribe"
+    value="Subscribe" />
+</form>
+
+type="submit" - sends the form to the server.
+name  - can use a name but doesn't need to have one.
+value - word on the button.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            IMAGE BUTTON
+        
+<form action="http://www.example.org/subscribe.php">
+  <p>Subscribe to our email list:</p>
+  <input type="text" name="email" />
+  <input type="image" src="images/subscribe.jpg"
+    width="100" height="20" />
+</form>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            BUTTON AND HIDDEN CONTROLS
+        
+<form action="http://www.example.com/add.php">
+  <button><img src="images/add.gif" alt="add"
+    width="10" height="10" /> Add</button>
+  <input type="hidden" name="bookmark"
+    value="lyrics" />
+</form>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                          LABELLING FORM CONTROLS
+each form control should have its own <label> element as this makes the form accessible to vision-impaired users.
+       
+        
+        
+<label>Age: <input type="text" name="age" /></label>
+<br/ >
+Gender:
+<input id="female" type="radio" name="gender"
+  value="f">
+<label for="female">Female</label>
+<input id="male" type="radio" name="gender"
+  value="m">
+<label for="male">Male</label>
+        
+When introducing form controls, the code was kept simple by indicating the purpose of each one in text next to it. However, each form control should have its own <label> element as this makes the form accessible to vision-impaired users.
+   
+The <label> element can be used in two ways. It can:
+1. Wrap around both the text description and the form input (as shown on the first line of the example to your right).
+        
+2. Be kept separate from the form control and use the for attribute to indicate which form control it is a label for (as shown with the radio buttons).
+
+for:
+        
+The for attribute states which form control the label belongs to. Note how the radio buttons use the id attribute. The value of the id attribute uniquely identifies an element from all other elements on a page. (The id attribute is
+covered on page 183.)
+        
+The value of the for attribute atches that of the id attribute n the form control it is labelling. his technique using the for and id attributes can be used on any form control. When a <label> element is used with a checkbox or radio button, users can click on either the form control or the label to select. The expanded clickable area makes the form easier to use. The position of the label is very important. If users do not know where to enter information or what information to enter, they are less likely to use the form correctly.
+
+best places to place labels on form controls:
+        Above or to the left:
+●● Text inputs
+●● Text areas
+●● Select boxes
+●● File uploads
+        
+To the right:
+●● Individual checkboxes
+●● Individual radio buttons
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                GROUPING FORM ELEMENTS
+        
+<fieldset>
+  <legend>Contact details</legend>
+  <label>Email:<br />
+  <input type="text" name="email" /></label><br />
+  <label>Mobile:<br />
+  <input type="text" name="mobile" /></label><br />
+  <label>Telephone:<br />
+  <input type="text" name="telephone" /></label>
+</fieldset>
+   
+<fieldset></fieldset>  group related form controls together inside the box. Box appearance adjustable via CSS.
+        
+        <legend></legend> - contains a caption or name of the group for better understanding.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                                HTML5: Form Validation
+
+ form validation is a message that form was not filled in correctly . Contents will be verified before they are sent to the server. It help to reduce server load; users will see the problems faster.       
+     
+<form action="http://www.example.com/login/"
+    method="post">
+  <label for="username">Username:</label>
+  <input type="text" name="username"
+    required="required" /></title><br />
+  <label for="password">Password:</label>
+  <input type="password" name="password"
+    required="required" />
+  <input type="submit" value="Submit" />
+</form>
+
+required="required" signifies that this field must be filled.  
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                            HTML5 DATE INPUT
+        
+<form action="http://www.example.com/bookings/" method="POST">
+        <label for="username">Departure date:</label>
+        <input type="date" name="departure" />
+        <input type="submit" value="Submit" />
+</form>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            HTML5: EMAILS & URL IMPUT
+        
+<form action="http://www.example.org/subscribe.php">
+  <p>Please enter your email address:</p>
+  <input type="email" name="email" />
+  <input type="submit" value="Submit" />
+</form>
+
+type="email" - browser will check if entered information was provided in a correct e-mail format.        
+        
+<form action="http://www.example.org/profile.php">
+  <p>Please enter your website address:</p>
+  <input type="url" name="website" />
+  <input type="submit" value="Submit" />
+</form>
+
+type="url" -     browser will check if entered information was provided in a correct url format.   
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            HTML5: Search Input
+
+<form action="http://www.example.org/search.php">
+  <p>Search:</p>
+  <input type="search" name="search" />
+  <input type="submit" value="Search" />
+</form>
+
+
+        
+<form action="http://www.example.org/search.php">
+  <p>Search:</p>
+  <input type="search" name="search"
+    placeholder="Enter keyword" />
+  <input type="submit" value="Search" />
+</form>
+
+placeholder contains text that will be displayed untill user don't click the form area.        
+    
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    
+                            DOCTYPES
+
+HTML5
+    
+<!DOCTYPE html>
+    
+_________________
+    
+    
+HTML 4
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+_________________
+    
+     
+Transitional XHTML 1.0
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/
+xhtml1-transitional.dtd">
+
+_________________
+     
+    
+Strict XHTML 1.0
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/
+xhtml1-strict.dtd">
+
+_________________
+    
+    
+XML Declaration
+<?xml version="1.0" ?>
+
+    
+    
+    
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    
+                                ID ATTRIBUTE (global)
+    
+The id attribute is known as a global attribute because it can be used on any element.
+id attributes can be used to allow the javascript to work with that particular element.    
+    <p id="p_main"></p>
+each id should be unique for the page. 
+                                   CLASS Attribute(global)
+    
+Every HTML element can also carry a class attribute.
+Give abillity to identify several elements being different from the others.   
+    <p class="important"></p>
+    
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+                            BLOCK ELEMENTS
+
+Always start on a new line.
+    
+<address>
+<article>
+<aside>
+<blockquote>
+<canvas>
+<dd>
+<div>
+<dl>
+<dt>
+<fieldset>
+<figcaption>
+<figure>
+<footer>
+<form>
+<h1>-<h6>
+<header>
+<hr>
+<li>
+<main>
+<nav>
+<noscript>
+<ol>
+<output>
+<p>
+<pre>
+<section>
+<table>
+<tfoot>
+<ul>
+<video>
+        
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+                                    Inline Elements
+<a>
+<abbr>
+<acronym>
+<b>
+<bdo>
+<big>
+<br>
+<button>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<img>
+<input>
+<kbd>
+<label>
+<map>
+<object>
+<q>
+<samp>
+<script>
+<select>
+<small>
+<span>
+<strong>
+<sub>
+<sup>
+<textarea>
+<time>
+<tt>
+<var>
+    
+    
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+                             Grouping Text & Elements In a Block
+
+                             
+<div>  
+
+<div id="header">
+  <img src="images/logo.gif" alt="Anish Kapoor" />
+  <ul>
+    <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div><!-- end of header -->
+
+
+                            GROUPING TEXT & INLINE ELEMENTS
+                            
+1. Contain a section of text
+where there is no other suitable
+element to differentiate it from
+its surrounding text
+2. Contain a number of inline
+elements
+The most common reason why
+people use <span> elements
+is so that they can control the
+appearance of the content of
+these elements using CSS.
+                          
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              IFrames
+
+An iframe is like a little window that has been cut into your page — and in that window you can see another page. The term iframe is an abbreviation of inline
+frame.
+
+Used to embed googla maps, or anu other page.
+
+<iframe
+  src="http://maps.google.co.uk/maps?q=moma+new+york
+  &amp;output=embed"
+  width="450"
+  height="350"
+  frameborder="0" # not supported in html5
+  scrolling="no"> # not available in html5 ( check if really not -NB)
+</iframe>
+
+
+in HTML5 attribute seampless can be applied to an iframe where scrollbars are not desired. Unsupported by older browsers.
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Information Your Pages
+                              
+                              
+<meta>                          
+The most common attributes are the name and content attributes, which tend to be
+used together.
+These attributes specify properties of the entire page. The value of the name
+attribute is the property you are setting, and the value of the content attribute is the value that you want to give to this property.
+
+description - used by search engine to understand what the page is about.155 chars max.
+
+keywords - currently has no effect.
+
+robots - This indicates whether search engines should add this page to their search results or not
+
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Information About Your Pages</title>
+		 <meta name="description"
+			 content="An Essay on Installation Art" />
+		 <meta name="keywords"
+			 content="installation, art, opinion" />
+		 <meta name="robots"
+			 content="nofollow" />
+		 <meta http-equiv="author"
+			 content="Jon Duckett" />
+		 <meta http-equiv="pragma"
+			 content="no-cache" />
+		 <meta http-equiv="expires"
+			 content="Fri, 04 Apr 2014 23:59:59 GMT" />
+</head>
+<body>
+</body>
+</html>
+
+
+http-equiv 
+
+author - defines the author of the page.
+
+pragma - prevents the browser from cahing the page.( storing locally)
+
+expires - Because browsers often cache the content of a page, the expires option can be used to indicate when the page should expire (and no longer be cached). Note that the date must be specified in the format shown.
+
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                    
+                                  ESCAPE CHARS
+                                  
+<
+ &lt;
+ &#60;
+ 
+>
+ &gt;
+ &amp;
+
+&
+ &#38;
+ &amp;
+
+"
+ &quot;
+ Quotation &#34;
+
+¢
+ &cent;
+ &#162;
+
+£
+ &pound;
+ &#163;
+
+¥
+ &yen;
+ &#165;
+
+¤
+ &euro;
+ &#8364;
+ Euro sign
+
+©
+ &copy;
+ Copyright &#169;
+
+®
+ &reg;
+ &#174;
+ Registered TD
+ 
+TM
+ &#8482;
+ &trade;
+ Trademark
+
+Left single quote
+&lsquo;
+&#8216;
+
+Right single quote
+&rsquo;
+&#8217;
+
+Left double quotes
+&ldquo;
+&#8220;
+
+Right double quotes
+&rdquo;
+&#8221;
+
+Multiplication&times;
+&#215;
+&times;
+
+Division sign
+&divide;
+&#247;
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                                FLASH
+                                
+.fla is the original format. But to use it one the web we need to convert it into .swf                             
+
+                      Adding a Flash Movie to Your Web Page
+The most popular way of adding Flash into a web page is using JavaScript.
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Adding a Flash Movie</title>
+		 <script type="text/javascript"
+			 src="http://ajax.googleapis.com/ajax/libs/
+			 swfobject/2.2/swfobject.js"></script>
+		 <script type="text/javascript">
+			 swfobject.embedSWF("flash/bird.swf",
+			 "bird", "400", "300", "8.0.0");</script>
+</head>
+<body>
+		 <div id="bird"><p>An animation of a bird taking
+			 a shower</p></div>
+</body>
+</html>
+
+In this example, the SWFObject script is hosted on Google's servers. We include the script in this web page using the first of the two <script> elements. The type attribute is used on the <script> element to indicate that the script inside is written in JavaScript. The src attribute tells the browser where to find the script. The second <script> element is used to tell the browser about the Flash movie, as well as which element it should replace. This element is actually telling the SWFObject script five pieces of information, which are in the brackets:
+1. The location of the .swf file: flash/bird.swf
+2. The element that the Flash movie should replace, specified by the value of the id attribute on the <div> element: bird
+3. The width of the Flash movie: 400 px
+4. The height of the Flash movie: 300 px
+5. The minimum version of the Flash player needed to view the movie: Flash Player 8
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                            Preparing a Flash Video for Your Site
+
+Convert video to .flv
+FinD an FLV player to play the video.
+Include the player and video in your page
+
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Adding a Flash Video</title>
+		 <script type="text/javascript"
+			 src="http://ajax.googleapis.com/ajax/libs/
+			 swfobject/2.2/swfobject.js"></script>
+		 <script type="text/javascript">
+			 var flashvars = {};
+			 var params = {movie:"../video/puppy.flv"};
+			 swfobject.embedSWF("flash/splayer.swf",
+			 "snow", "400", "320", "8.0.0",
+			 flashvars, params);</script>
+</head>
+<body>
+		 <div id="snow"><p>A video of a puppy playing in
+			 the snow</p></div>
+</body>
+</html>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                       HTML5: Preparing Video for Your Pages
+formats:
+H264: IE and Safari
+WebM: Android, Chrome,
+Firefox, Opera
+
+
+                          HTML5 : Adding video
+                          
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Adding HTML5 Video</title>
+</head>
+<body>
+		 <video src="video/puppy.mp4"
+			 poster="images/puppy.jpg"
+			 width="400" height="300"
+			 preload
+			 controls
+			 loop>
+			 <p>A video of a puppy playing in the snow</p>
+		 </video>
+</body>
+</html>
+   
+preload - This attribute tells the browser what to do when the page loads. It can have one of three values: 
+none ( user must press play for video to start preloading); 
+auto( browser loads video as soon as the page is loaded);
+metadata( browser just collects information such as size, first frame, tracklist,duration.)
+
+<video>:
+src - specifies a path.
+poster - specifies a thumbnail, or an image to show intill press play.
+controls - specifies that browser should supply its own controls for playback
+autoplay - autoplay ))
+loop - video will play again once finished.
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                    VIDEO MULTIPLE SOURCES
+                    
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Multiple Video Sources</title>
+</head>
+<body>
+		 <video poster="images/puppy.jpg" width="400"
+			 height="320" preload controls loop>
+			 <source src="video/puppy.mp4" type='video/
+				 mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+			 <source src="video/puppy.webm" type='video/
+				 webm;codecs="vp8, vorbis"' />
+			 <p>A video of a puppy playing in the snow</p>
+		 </video>
+</body>
+</html>
+  
+type - tells the browser what format the video is.Otherwise browser will download some of the video to see if it can play the file.
+codecs - codecs used to oncode the video.If the browser does not support the <video> element or the format of video used, it will display whatever is between the opening and closing</vido> tags.
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        Combining Flash & HTML5 Video
+Because some of the video
+players built in Flash support
+H264 encoding, if you use a
+player that supports this format
+you would only need to provide
+the video in H264 and WebM
+formats. (You would not need
+it in FLV format as well.) You
+will see this demonstrated in
+the example at the end of the
+chapter.
+If you start to work with HTML5
+video in depth, you can also:
+●●
+Create your own playback
+controls
+●●
+Provide different versions
+of the video for browsers
+that have different sized
+screens (so you can provide
+lower resolution content for
+handheld devices)
+●●
+Tell different parts of a page
+to change when the video
+reaches a certain point
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                ADDING A FLASH MP3 PLAYER 
+                                
+Use a hosted service, or use flash or html 5(<audio>   .                                 
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Adding a Flash MP3 Player</title>
+		 <script type="text/javascript"
+			 src="http://ajax.googleapis.com/ajax/libs/
+			 swfobject/2.2/swfobject.js"></script>
+		 <script type="text/javascript">
+			 var flashvars = {};
+			 var params = {mp3: "audio/test-audio.mp3"};
+			 swfobject.embedSWF(
+				 "flash/player_mp3_1.0.0.swf",
+				 "music-player", "200", "20", "8.0.0",
+				 flashvars, params);</script>
+</head>
+<body>
+		 <div id="music-player">
+			 <p>You cannot hear this track because this
+				 browser does not support our Flash music
+				 player.</p>
+		 </div>
+</body>
+</html>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                             Adding HTML5 Audio to Your Pages
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Adding HTML5 Audio</title>
+</head>
+<body>
+		 <audio src="audio/test-audio.ogg"
+			 controls autoplay>
+			 <p>This browser does not support our audio
+			 format.</p>
+		 </audio>
+</body>
+</html>
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                
+                                MULTIPLE SOURCES
+
+<!DOCTYPE html>
+<html>
+<head>
+		 <title>Multiple Audio Sources</title>
+</head>
+<body>
+		 <audio controls autoplay>
+			 <source src="audio/test-audio.ogg" />
+			 <source src="audio/test-audio.mp3" />
+			 <p>This browser does not support our audio
+			 format.</p>
+		 </audio>
+</body>
+</html>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+                                        HTML5 FOUNDATIONS BOOK
+                                        
+Phrase Elements
+
+<abbr>
+<b>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<kbd>
+<mark>
+<samp>
+<small>
+<strong>
+<sub>
+<sup>
+<var>**
+
+Each phrase element is a container element, so an opening and a closing tag must be used.
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Special Characters
+
+“ Quotation mark - &quot
+’ Apostrophe - &#39
+© Copyright symbol - &copy
+& Ampersand - &amp
+Empty space Nonbreaking space - &nbsp
+— Long dash - &mdash
+| Vertical Bar - &#124
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJam Coffee House</title>
+  <meta charset="utf-8">
+  <body>
+    <header>
+      <h1>JavaJam Coffee House</h1>
+    </header>
+    <nav>
+      <a href="index.html"><b>Home</b></a>&nbsp;&nbsp;
+      <a href="menu.html"><b>Menu</b></a>&nbsp;&nbsp;
+      <a href="music.html"><b>Jobs</b></a>
+    </nav>
+    <main>
+      <h2>Relax at JavaJam</h2>
+      <ul>
+        <li> Specialty Coffee and Tea</li>
+        <li> Bagels, Muffins and Organic Snacks</li>
+        <li> Music and Poetry Reading</li>
+        <li> Open Mic Night</li>
+      </ul>
+      <div>
+        <p>
+          54321 Route 42<br>
+          Ellison Bay, WI 54210<br>
+          888-555-5555
+        </p>
+      </div>
+      <footer>
+        <small><i>Copyright &copy; 2017 JavaJam Coffee House</i></small><br>
+        <small>bohdan.skochii@gmail.com</small>
+      </footer>
+    </main>
+  </body>
+</head>
+</html>
+
+##############################################################################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                        
+                                        
+                                        
+                                        
